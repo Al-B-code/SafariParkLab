@@ -76,6 +76,13 @@ INSERT INTO animals (name, type, age, enclosure_id) VALUES ('Polly', 'Parrot', 2
 -- ON employee_id = staff.id
 -- WHERE enclosures.name = 'Big Cats';
 
+-- alternative solution to Q2
+-- SELECT staff.name 
+-- FROM staff
+-- INNER JOIN assignment
+-- ON assignment.employee_id = staff.id
+-- WHERE assignment.enclosure_id = 1;
+
 -- extension 
 -- SELECT *
 -- FROM enclosures 
@@ -122,15 +129,15 @@ INSERT INTO animals (name, type, age, enclosure_id) VALUES ('Polly', 'Parrot', 2
 -- WHERE enclosures.name = 'Shell People';
 
 
-SELECT enclosures.name, animals.name
-FROM enclosures
-INNER JOIN animals
-ON enclosures.id = animals.enclosure_id
-INNER JOIN assignment
-ON assignment.enclosure_id = enclosures.id
-INNER JOIN staff
-ON employee_id = staff.id
-WHERE enclosures.name = 'Big Cats' AND animals.name != 'Tony'
+-- SELECT enclosures.name, animals.name
+-- FROM enclosures
+-- INNER JOIN animals
+-- ON enclosures.id = animals.enclosure_id
+-- INNER JOIN assignment
+-- ON assignment.enclosure_id = enclosures.id
+-- INNER JOIN staff
+-- ON employee_id = staff.id
+-- WHERE enclosures.name = 'Big Cats' AND animals.name != 'Tony'
 
 
 -- The names of staff working in enclosures which are closed for maintenance.
